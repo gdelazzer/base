@@ -1,0 +1,15 @@
+Django==1.2.3
+South==0.7.2
+Werkzeug==0.6.2
+django-debug-toolbar==0.8.3
+django-extensions==0.5
+django-filter==0.5.3
+django-frontendadmin==0.4
+django-pagination==1.0.7
+httplib2==0.6.0
+ipython==0.10.1
+restclient==0.9.10
+simplejson==2.1.1
+virtualenv==1.4.5
+virtualenvwrapper==1.20
+wsgiref==0.1.2
