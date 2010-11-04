@@ -42,16 +42,18 @@
 <body>
 
     <div id="container" class="container_12">
-        <header class="grid_16">
-            {% if user.is_authenticated %}
-                Welcome {{ user.username }} - <a href="{% url django.contrib.auth.views.logout_then_login %}">logout</a>
-            {% else %}
-                Please <a href="{% url django.contrib.auth.views.login %}">login</a>
-            {% endif %}
-
+        <header class="grid_12">
+            <div id="login_bar" class="grid_2 prefix_10">
+                {% if user.is_authenticated %}
+                    <p>Welcome {{ user.username }} - <a href="{% url django.contrib.auth.views.logout_then_login %}">logout</a></p>
+                {% else %}
+                    <p>Please <a href="{% url django.contrib.auth.views.login %}">login</a></p>
+                {% endif %}
+            </div>
+            <div class="clearfix"></div>
             <!-- TODO: update website name -->
             <a href="/" title="My Website"><img src="{{ MEDIA_URL }}/images/logo.png" alt="My Website"/></a>
-
+            <div class="clearfix"></div>
             {% block header %}{% endblock %}
         </header>
 
