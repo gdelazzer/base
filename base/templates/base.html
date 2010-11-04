@@ -50,13 +50,11 @@
             {% endif %}
 
             <!-- TODO: update website name -->
-            <h1>My Website</h1>
+            <a href="/" title="My Website"><img src="{{ MEDIA_URL }}/images/logo.png" alt="My Website"/></a>
 
             {% block header %}{% endblock %}
         </header>
 
-        <!-- TODO: Change website title -->
-        <a href="/" title="My Website"><img src="{{ MEDIA_URL }}/images/logo.png" alt="My Website"/></a>
         <div id="main" class="grid_12">
             {% block content %}{% endblock %}
         </div>
