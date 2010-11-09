@@ -111,6 +111,9 @@ INSTALLED_APPS = (
 
 )
 
+# Profiles config
+AUTH_PROFILE_MODULE = 'main.UserProfile'
+
 # Debug Toolbar configs
 INTERNAL_IPS = ('127.0.0.1')
 

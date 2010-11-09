@@ -27,12 +27,12 @@
 
 
     <!-- CSS : implied media="all" -->
-    <link rel="stylesheet" href="{{ MEDIA_URL }}/css/base.css?v=2">
     <link rel="stylesheet" href="{{ MEDIA_URL }}/css/style.css?v=2">
     <link rel="stylesheet" href="{{ MEDIA_URL }}/css/960.css">
     <link rel="stylesheet" href="{{ MEDIA_URL }}/css/ui-lightness/jquery-ui-1.8.5.custom.css">
     <!-- Uncomment if you are specifically targeting less enabled mobile browsers
     <link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
+    <link rel="stylesheet" href="{{ MEDIA_URL }}/css/base.css?v=2">
 
     <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
     <script src="{{ MEDIA_URL }}/js/libs/modernizr-1.6.min.js"></script>
@@ -43,7 +43,7 @@
 
     <div id="container" class="container_12">
         <header class="grid_12">
-            <div id="login_bar" class="grid_2 prefix_10">
+            <div id="login_bar" class="grid_12">
                 {% if user.is_authenticated %}
                     <p>Welcome {{ user.username }} - <a href="{% url django.contrib.auth.views.logout_then_login %}">logout</a></p>
                 {% else %}
@@ -56,12 +56,14 @@
             <div class="clearfix"></div>
             {% block header %}{% endblock %}
         </header>
+        <div class="clearfix"></div>
 
         <div id="main" class="grid_12">
             {% block content %}{% endblock %}
         </div>
+        <div class="clearfix"></div>
 
-        <footer>
+        <footer class="grid_12">
             {% block footer %}{% endblock %}
         </footer>
     </div> <!--! end of #container -->
