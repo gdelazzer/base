@@ -107,7 +107,8 @@ INSTALLED_APPS = (
     'frontendadmin',
     # debug_toolbar
     # My apps
-    'base.main',
+    SITE_NAME+'.main',
+    SITE_NAME+'.customtags',
 
 )
 
