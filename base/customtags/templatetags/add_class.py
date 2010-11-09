@@ -1,3 +1,7 @@
+#
+# From http://djangosnippets.org/snippets/2253/
+#
+
 import re
 from django.utils.safestring import mark_safe
 from django import template
