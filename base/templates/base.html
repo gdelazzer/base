@@ -43,7 +43,7 @@
 
     <div id="container" class="container_12">
         <header class="grid_12">
-            <div id="login_bar" class="grid_12">
+            <div id="login_bar" class="grid_12 alpha">
                 {% if user.is_authenticated %}
                     <p>Welcome {{ user.username }} - <a href="{% url django.contrib.auth.views.logout_then_login %}">logout</a></p>
                 {% else %}
@@ -64,7 +64,9 @@
         <div class="clearfix"></div>
 
         <footer class="grid_12">
-            {% block footer %}{% endblock %}
+            {% block footer %}
+                {% include "_footer.html" %}
+            {% endblock %}
         </footer>
     </div> <!--! end of #container -->
 
